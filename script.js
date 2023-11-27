@@ -4,7 +4,7 @@ const cars= [
   fuel:'diesel'},
   {brand: 'fiat',
   model: 'panda 4x4',
-  fuel:'gasoline'},
+  fuel:'petrol'},
   {brand: 'opel',
   model: 'corsa',
   fuel: 'gpl'},
@@ -13,10 +13,10 @@ const cars= [
   fuel:'electricity'},
   {brand: 'peugeot',
   model: '208',
-  fuel:'metan'},
+  fuel:'methane'},
   {brand: 'volkswagen',
   model:'touran' ,
-  fuel:'gasoline'},
+  fuel:'petrol'},
   {brand: 'audi',
   model: 'a3',
   fuel:'diesel'},
@@ -28,14 +28,14 @@ const cars= [
   fuel:'diesel'},
   {brand: 'skoda',
   model: 'fabia',
-  fuel:'gasoline'},
+  fuel:'petrol'},
 ]
 
 const dieselCars = cars.filter((car)=> car.fuel == 'diesel');
-const gasolineCars = cars.filter((car)=> car.fuel == 'gasoline');
-const otherCars = cars.filter((car)=> car.fuel !== 'diesel' && car.fuel !== 'gasoline');
+const petrolCars = cars.filter((car)=> car.fuel == 'petrol');
+const otherCars = cars.filter((car)=> car.fuel !== 'diesel' && car.fuel !== 'petrol');
 
 
 console.log(dieselCars);
-console.log(gasolineCars);
+console.log(petrolCars);
 console.log(otherCars);
