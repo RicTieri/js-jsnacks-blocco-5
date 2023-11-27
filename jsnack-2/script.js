@@ -48,7 +48,8 @@ const patentabili = people.map((person) => {
   } else{
     person.license = true;
   }
-  return person.fullName 
+  const check = {fullName: person.fullName, age: person.age, license: person.license};
+  return check;
 })
 
 console.log(patentabili);
