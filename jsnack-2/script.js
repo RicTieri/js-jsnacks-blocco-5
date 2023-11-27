@@ -42,13 +42,14 @@ const people = [
 ]
 
 const patentabili = people.map((person) => {
-  person.fullName = person.firstName + ' ' + person.lastName;
+  let fullName = person.firstName + ' ' + person.lastName;
+  let license;
   if (person.age < 18){
-    person.license = false;
+    license = false;
   } else{
-    person.license = true;
+    license = true;
   }
-  const check = {fullName: person.fullName, age: person.age, license: person.license};
+  const check = {fullName: fullName, age: person.age, license: license};
   return check;
 })
 
