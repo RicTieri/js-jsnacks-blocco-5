@@ -14,9 +14,17 @@ const browserTab = {
 
 const socials =  ["Facebook", "Instagram", "Youtube"];
 
-const {tab} = browserTab;
+let {tab} = browserTab;
 
-browserTab = browserTab.filter((element) => {
-  if(!socials.includes(element)) return true;
+tab = tab.filter((element) => {
+  if(!socials.includes(element)) {
+    return true
+  } else if(browserTab.activeTab == tab.indexOf(element)) {
+    browserTab.activeTab =  tab.indexOf(element) +1;
+  };
 });
+
+browserTab.tab = tab;
+
+console.log(browserTab.tab, browserTab.activeTab)
 
