@@ -8,7 +8,7 @@
 
 
 const browserTab = {
-    tab: ["Facebook", "GitHub", "Gmail"],
+    tab: ["Facebook", "GitHub", "Gmail", "Instagram", "Youtube"],
     activeTab: 0
 };
 
@@ -16,11 +16,7 @@ const socials =  ["Facebook", "Instagram", "Youtube"];
 
 const {tab} = browserTab;
 
-
-tab.forEach((element) => {
-  if(socials.includes(element)){
-    tab.remove(element);
-  } 
+browserTab = browserTab.filter((element) => {
+  if(!socials.includes(element)) return true;
 });
-  
-console.log(tab)
+
